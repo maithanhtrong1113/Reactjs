@@ -8,7 +8,7 @@ function App() {
     { ProductName: "Iphone XS Max", ProductPrice: 199 },
   ];
   return (
-    <div class="container">
+    <div className="container">
       <h2>Cart</h2>
       <h1>{DateBuy.toDateString()}</h1>
       <NavBar
