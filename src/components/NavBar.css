@@ -1,0 +1,16 @@
+.Item {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+.ButtonPrice {
+  margin: 20px 0;
+  padding: 10px 50px;
+  background-color: rgb(161, 70, 247);
+  border-radius: 20px;
+  display: block;
+  cursor: pointer;
+}
