@@ -10,7 +10,7 @@ function NavBar(props) {
     <div className="Item">
       <h3>{props.name}</h3>
       <button onClick={clickHandler} className="ButtonPrice">
-        ${price}
+        ${props.price}
       </button>
     </div>
   );
