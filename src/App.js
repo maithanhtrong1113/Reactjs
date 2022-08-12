@@ -1,4 +1,5 @@
 import "./App.css";
+
 import React, { useState } from "react";
 import InputForm from "./components/InputForm";
 import NavBar from "./components/NavBar";
@@ -25,7 +26,9 @@ function App() {
     <div className="container">
       <h2>Cart</h2>
       <h1>{DateBuy.toDateString()}</h1>
+
       <InputForm onSubmitData={saveData} />
+
       {list.map((Product) => (
         <NavBar
           name={Product.ProductName}
