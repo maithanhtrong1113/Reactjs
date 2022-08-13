@@ -1,0 +1,10 @@
+.contact {
+  margin: 20px 0px;
+  width: 30%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.contact a {
+  padding: 10px;
+}

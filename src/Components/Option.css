@@ -1,0 +1,42 @@
+.option {
+  display: flex;
+  margin: auto 250px;
+  justify-content: space-around;
+}
+.optionItem {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .option {
+    display: flex;
+    margin: auto 150px;
+    font-size: 15px;
+    justify-content: space-around;
+  }
+  .optionItem {
+    display: flex;
+    width: 30%;
+  }
+}
+@media (max-width: 500px) {
+  .option {
+    display: flex;
+    margin: auto 20px;
+    font-size: 10px;
+    justify-content: space-around;
+  }
+  .optionItem {
+    display: flex;
+    width: 30%;
+  }
+}
+.optionItem a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,115 @@
+.imgLogo {
+  width: 108px;
+}
+.leftNav {
+  display: flex;
+  align-items: center;
+}
+.faIcon a {
+  font-size: 16px;
+  padding: 10px;
+  color: black;
+}
+.faIcon span {
+  font-size: 13px;
+  cursor: pointer;
+  padding: 10px;
+  color: black;
+}
+.faIcon span:hover {
+  border-bottom: 1px solid black;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  font-size: 13px;
+  float: left;
+  display: block;
+  padding: 14px 13px;
+  color: black;
+  text-decoration: none;
+}
+.menu a:hover {
+  border-bottom: 1px solid black;
+}
+.menu .icon {
+  display: none;
+}
+
+.More {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 2;
+  visibility: hidden;
+}
+.moreItem {
+  display: flex;
+  flex-direction: column;
+}
+.activee {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 50%;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 850px) {
+  .menu a {
+    display: none;
+  }
+  .menu a.icon {
+    display: block;
+  }
+}
+@media screen and (max-width: 850px) {
+  .nav {
+    height: 50px;
+  }
+  .menu.responsive .icon {
+    position: absolute;
+    left: 5%;
+    top: 1%;
+  }
+  .cover {
+    width: 90%;
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    z-index: 1;
+  }
+  .menu.responsive a {
+    background-color: #f2f2f2;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .menu.responsive a:hover {
+    border-bottom: 1px solid black;
+  }
+  .imgLogo {
+    position: absolute;
+    top: 2%;
+    left: calc(45% - 60px);
+  }
+  .All {
+    display: none;
+  }
+}
+.More a {
+  text-decoration: none;
+  color: black;
+}

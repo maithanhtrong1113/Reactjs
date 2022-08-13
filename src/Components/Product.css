@@ -1,0 +1,38 @@
+.cardList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  max-width: 270px;
+  text-align: left;
+  font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 600px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card {
+    max-width: 350px;
+    text-align: left;
+  }
+}
+.card .learnMore {
+  text-decoration: none;
+  font-weight: 500;
+  color: #5aa2e1;
+}
+.card h2,
+.card span {
+  color: black;
+}
+
+.card img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
