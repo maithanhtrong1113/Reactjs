@@ -7,6 +7,7 @@ function App() {
     { text: "Do all exercises!", id: "g1" },
     { text: "Finish the course!", id: "g2" },
   ]);
+  // Thêm
   const onAddCoureHandle = (course) => {
     setCourses((prevCourses) => {
       const coursesUpdate = [...prevCourses];
@@ -14,6 +15,7 @@ function App() {
       return coursesUpdate;
     });
   };
+  //Xóa
   const deleteItemHandler = (courseId) => {
     setCourses((prevCourses) => {
       const coursesUpdate = prevCourses.filter(
