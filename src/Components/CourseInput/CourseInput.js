@@ -22,7 +22,7 @@ function CourseInput(props) {
         <input onChange={inputHandler} />
         <button type="submit"> Add Goal</button>
       </form>
-      <span style={{ visibility: !isValid ? "visible" : "hidden" }}>
+      <span className={`spanInput ${!isValid ? "inValid" : ""}`}>
         Dữ liệu không được để trống
       </span>
     </div>

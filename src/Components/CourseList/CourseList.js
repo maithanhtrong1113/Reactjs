@@ -1,4 +1,4 @@
-import CourseItem from "../CourseItem/CourseItem";
+import CourseItem from "./CourseItem/CourseItem";
 
 function CourseList(props) {
   return (
