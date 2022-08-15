@@ -1,0 +1,19 @@
+button {
+  padding: 10px 40px;
+  background-color: rgb(177, 116, 234);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.Input {
+  color: black;
+  height: 100%;
+  font-weight: 800;
+}
+input {
+  padding: 10px 10px;
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px auto;
+}
