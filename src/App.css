@@ -1,11 +1,13 @@
 .Count {
-  width: 50%;
-  margin: 5% 25%;
+  width: 30%;
+  margin: 5% 35%;
   background-color: bisque;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 1px 5px rgb(245, 238, 229);
 }
 .button {
   display: flex;
@@ -20,5 +22,5 @@
   border-radius: 10px;
 }
 .button button:hover {
-  background-color: rgb(131, 242, 242);
+  background-color: rgb(196, 242, 242);
 }
