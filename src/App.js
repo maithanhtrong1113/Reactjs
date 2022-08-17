@@ -1,38 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Content from "./components/Content.js";
+// 1. useEffect(callback)
+// Gọi callback khi component re-render
+// Gọi callback sau khi component thêm element vào DOM
 
-import Login from "./components/Login/Login";
-import Home from "./components/Home/Home";
-import MainHeader from "./components/MainHeader/MainHeader";
+//2.useEffect(callback,[])
+//Chỉ gọi callback 1 lần khi component khi mounted
 
+//3.useEffect(callback,[dependencies])
+//callback sẽ được gọi khi dependencies thay đổi
+
+// cả 3 luôn được gọi khi component mounted
+// Clean-up function luôn được gọi trước khi component unmount
+// const tabs = ["posts", "comments", "albums"];
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const storeUserLoggedInfomaiton = localStorage.getItem("isLogin");
-    if (storeUserLoggedInfomaiton === "1") {
-      setIsLoggedIn(true);
-    }
-  }, []);
-  const loginHandler = (email, password) => {
-    // We should of course check email and password
-    // But it's just a dummy/ demo anyways
-    localStorage.setItem("isLogin", "1");
-    setIsLoggedIn(true);
-  };
-
-  const logoutHandler = () => {
-    localStorage.clear("isLogin");
-    setIsLoggedIn(false);
-  };
+  // const [type, setType] = useState("posts");
+  const [show, setShow] = useState(false);
+  // const [posts, setPosts] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/posts")
+  //     .then((res) => res.json())
+  //     .then((posts) => {
+  //       console.log(posts);
+  //     });
+  // }, []);
 
   return (
-    <React.Fragment>
-      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
-      <main>
-        {!isLoggedIn && <Login onLogin={loginHandler} />}
-        {isLoggedIn && <Home onLogout={logoutHandler} />}
-      </main>
-    </React.Fragment>
+    <div>
+      {/* {tabs.map((tab) => (
+        <button
+          key={tab}
+          style={
+            type === tab
+              ? {
+                  color: "#fff",
+                }
+              : {}
+          }
+          onClick={() => setType(tab)}
+        >
+          {" "}
+          {tab}
+        </button>
+      ))} */}
+      <button onClick={() => setShow(!show)}>Click</button>
+      {show && <Content />}
+    </div>
   );
 }
 
