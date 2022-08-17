@@ -1,0 +1,24 @@
+.Count {
+  width: 50%;
+  margin: 5% 25%;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.button {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.button button {
+  padding: 15px 20px;
+  background-color: aqua;
+  border: none;
+  border-radius: 10px;
+}
+.button button:hover {
+  background-color: rgb(131, 242, 242);
+}
