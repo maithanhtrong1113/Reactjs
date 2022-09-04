@@ -1,8 +1,17 @@
 import { useState } from "react";
-import "./App.css";
-
+import Content from "./Components/Content.js";
 function App() {
-  return;
-  <div></div>;
+  const [show, setShow] = useState(false);
+  const handlerShow = () => {
+    setShow(!show);
+  };
+  console.log("parent render");
+  return (
+    <div>
+      <div>hello</div>
+      <Content show={false}></Content>
+      <button onClick={handlerShow}>Show</button>
+    </div>
+  );
 }
 export default App;
