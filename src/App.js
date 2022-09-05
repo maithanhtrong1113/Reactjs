@@ -8,10 +8,10 @@ function App() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <AppContext value={theme}>
+    <AppContext.Provider value={theme}>
       <button onClick={buttonHandle}>Chang Theme</button>
       <Content></Content>
-    </AppContext>
+    </AppContext.Provider>
   );
 }
 export default App;
