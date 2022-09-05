@@ -1,8 +1,52 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import MoviesList from "./components/MoviesList";
 import "./App.css";
 
 function App() {
-  return;
-  <div></div>;
+  const [movies, setMovies] = useState([]);
+  function fetchMoviesHandler() {
+    // fetch("https://swapi.dev/api/films/")
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     const converty = data.results.map((movie) => {
+    //       return {
+    //         id: movie.episode_id,
+    //         tittle: movie.tittle,
+    //         openingText: movie.opening_crawl,
+    //         releaseDate: movie.release_date,
+    //       };
+    //     });
+    //     setMovies(converty);
+    //   });
+    fetch("https://swapi.dev/api/films/")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const convertt = data.results.map((movie) => {
+          return {
+            id: movie.episode_id,
+            tittle: movie.tittle,
+            openingText: movie.opening_crawl,
+            releaseDate: movie.release_date,
+          };
+        });
+        setMovies(convertt);
+      });
+  }
+
+  return (
+    <React.Fragment>
+      <section>
+        <button onClick={fetchMoviesHandler}>Fetch Movies</button>
+      </section>
+      <section>
+        <MoviesList movies={movies} />
+      </section>
+    </React.Fragment>
+  );
 }
+
 export default App;
