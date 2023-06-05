@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-
+import learnStyles from "../Index/Learn.module.css";
+import cardStyles from "../Index/Card/Card.module.css";
 const scss = () => {
   return (
     <Fragment>
@@ -15,6 +16,12 @@ const scss = () => {
         </div>
       </div>
       <button class="btn-success-lg">Hover Me</button>
+      <span className={`${learnStyles.hello} bg-info`}>
+        hello from index module
+      </span>
+      <span className={`${cardStyles.hello} bg-danger`}>
+        hello from card module
+      </span>
     </Fragment>
   );
 };
