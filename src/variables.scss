@@ -1,0 +1,67 @@
+// variables
+$primary: rgb(37, 207, 207, 0.5);
+
+// map map-get($map: , $key: )
+$color: (
+  "primary": $primary,
+  "danger": #df1d5b,
+  "success": #20e3b2,
+  "warning": yellow,
+  "white": white,
+  "dark": black,
+  "info": #2cccff,
+);
+// Loops create properties css exam: bg-dark, text-dark
+//mixxin : nhóm các thuộc tính css thành một hàm mixin
+@mixin btn($bg-color) {
+  border-radius: 5px;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: $bg-color;
+}
+//for each
+@each $key, $value in $color {
+  .text-#{$key} {
+    color: $value;
+  }
+  .bg-#{$key} {
+    background-color: $value;
+  }
+  .btn-#{$key}-sm {
+    @include btn($value);
+    padding: 0.5rem;
+    &:hover {
+      background-color: lighten($value, 5);
+    }
+  }
+  .btn-#{$key}-lg {
+    @include btn($value);
+    padding: 1rem;
+    &:hover {
+      background-color: lighten($value, 5);
+    }
+  }
+  // For custom color
+  @for $i from 1 through 9 {
+    .text-#{$key}-light-#{$i} {
+      color: mix(white, $value, $i * 10);
+    }
+    .bg-#{$key}-light-#{$i} {
+      color: mix(white, $value, $i * 10);
+    }
+  }
+  // Selector
+  .text-#{$key}-hover {
+    &:hover {
+      color: $value;
+    }
+  }
+  .bg-#{$key}-hover {
+    &:hover {
+      background-color: $value;
+    }
+  }
+}
